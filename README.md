@@ -1,19 +1,16 @@
 # Predicting Climate Change Using Machine Learning at ClimateWins
 
-<b><span style='color:#154360'>The next weather station we look at is München/Munich and for the year 2001
-    Climate Wins is interested in using machine learning to help predict the consequences of climate change around Europe and, potentially, the world. It’s been sorting through hurricane predictions from <a href='https://www.noaa.gov/'>The National Oceanic and Atmospheric Administration (NOAA)</a> in the U.S., typhoon data from <a href='https://www.jma.go.jp/jma/indexe.html'>The Japan Meteorological Agency (JMA)</a> in Japan, world temperatures, and a great deal of other data. However, it’s hard to grasp how everything is changing in the world at once. This is where machine learning comes in!</span></b>
+<span style='color:#154360'>
+Climate Wins is interested in using machine learning to help predict the consequences of climate change around Europe and, potentially, the world. It’s been sorting through hurricane predictions from <a href='https://www.noaa.gov/'>The National Oceanic and Atmospheric Administration (NOAA)</a> in the U.S., typhoon data from <a href='https://www.jma.go.jp/jma/indexe.html'>The Japan Meteorological Agency (JMA)</a> in Japan, world temperatures, and a great deal of other data. However, it’s hard to grasp how everything is changing in the world at once. This is where machine learning comes in!</span>
 
 ## Getting Started
 
 For this project, we are interested in identifying the best resources for predicting climate changes where people live. We have chosen to use both supervised and unsupervised machine learning algorithms.
 
-### Prerequisites
+### Models
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+We have chosen one supervised learning model and two unsupervised models:
+<ul><li>K-Nearest Neighbour (KNN)</li><li>Decision Tree</li><li>Artificial Neural Network</li></ul>
 
 ### Installing
 

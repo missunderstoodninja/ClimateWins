@@ -26,68 +26,143 @@ For this project, we are using three ML algorithms:
 <li><i>Decision Tree</i> - also used for classification and regression tasks. It works by splitting the data into subsets based on the value of input features, making it highly interpretable and effective for a range of practical applications.</li>
 <li><i>Artificial Neural Network</i> - is used for a wide range of machine learning tasks, including classification, regression, and many more complex problems like image recognition, natural language processing, and time-series forecasting.</li></ul>
 
-Say what the step will be
+### Ethical Considerations
+To address ethical concerns, we have to consider any bias that may impact how the analysis is conducted and the results thereof. Bias in machine learning can affect model performance, accuracy, fairness, and overall generalisability.
 
-```
-Give the example
-```
+Some biases observed in this project include:
+<ol><li><b>Collection Bias:</b> The data was collected from 18 weather stations. However, according to the ECAD there are a total of 23755 weather stations across Europe. This sample of weather stations may not be a representative sample</li>
+<li><b>Temporal Bias:</b> Given that the data range is so large (1800s to 2022), some of the data is likely to not be relevant anymore and could result in a distorted outcome from the models</li>
+<li><b>Location Bias:</b> The data has been collected from only European weather stations and may not be able to predict weather patterns from other areas of the world given that climates are different.</li></ol>
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+#### K-Nearest Neighbour
+We ran the data through a KNN model, which yielded an overall accuracy score of 88,15% for all 15 weather stations. Valentia has the best accuracy score of 95.83%, well above the mean of 88%. Sonnblick showed an accuracy score of 100%, indicating that the model was overfitting. i.e. the model has overadapted to the training data and captures even random fluctuations. 
+<table>
+        <tr>
+            <th>Station</th>
+            <th>Predicted Negative</th>
+            <th>Predicted Positive</th>
+            <th>Actual Negative</th>
+            <th>Actual Positive</th>
+            <th>Accuracy</th>
+        </tr>
+        <tr>
+            <td>BASEL</td>
+            <td>3907</td>
+            <td>935</td>
+            <td>465</td>
+            <td>431</td>
+            <td>84.38%</td>
+        </tr>
+        <tr>
+            <td>BELGRADE</td>
+            <td>3238</td>
+            <td>1502</td>
+            <td>460</td>
+            <td>538</td>
+            <td>82.61%</td>
+        </tr>
+        <tr>
+            <td>BUDAPEST</td>
+            <td>3416</td>
+            <td>1432</td>
+            <td>406</td>
+            <td>484</td>
+            <td>84.49%</td>
+        </tr>
+        <tr>
+            <td>DEBILT</td>
+            <td>4346</td>
+            <td>732</td>
+            <td>369</td>
+            <td>291</td>
+            <td>88.50%</td>
+        </tr>
+        <tr>
+            <td>DUSSELDORF</td>
+            <td>4167</td>
+            <td>800</td>
+            <td>431</td>
+            <td>340</td>
+            <td>86.56%</td>
+        </tr>
+        <tr>
+            <td>HEATHROW</td>
+            <td>4161</td>
+            <td>754</td>
+            <td>414</td>
+            <td>409</td>
+            <td>85.66%</td>
+        </tr>
+        <tr>
+            <td>KASSEL</td>
+            <td>4563</td>
+            <td>607</td>
+            <td>316</td>
+            <td>252</td>
+            <td>90.10%</td>
+        </tr>
+        <tr>
+            <td>LJUBLJANA</td>
+            <td>3726</td>
+            <td>1133</td>
+            <td>410</td>
+            <td>469</td>
+            <td>84.68%</td>
+        </tr>
+        <tr>
+            <td>MAASTRICHT</td>
+            <td>4249</td>
+            <td>819</td>
+            <td>357</td>
+            <td>313</td>
+            <td>88.32%</td>
+        </tr>
+        <tr>
+            <td>MADRID</td>
+            <td>2735</td>
+            <td>2257</td>
+            <td>313</td>
+            <td>433</td>
+            <td>87.00%</td>
+        </tr>
+        <tr>
+            <td>MUNCHEN</td>
+            <td>4222</td>
+            <td>766</td>
+            <td>426</td>
+            <td>324</td>
+            <td>86.93%</td>
+        </tr>
+        <tr>
+            <td>OSLO</td>
+            <td>4624</td>
+            <td>507</td>
+            <td>352</td>
+            <td>255</td>
+            <td>89.42%</td>
+        </tr>
+        <tr>
+            <td>SONNBLICK</td>
+            <td>5738</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>100.00%</td>
+        </tr>
+        <tr>
+            <td>STOCKHOLM</td>
+            <td>4449</td>
+            <td>588</td>
+            <td>384</td>
+            <td>317</td>
+            <td>87.78%</td>
+        </tr>
+        <tr>
+            <td>VALENTIA</td>
+            <td>5391</td>
+            <td>108</td>
+            <td>168</td>
+            <td>71</td>
+            <td>95.83%</td>
+        </tr>
+    </table>

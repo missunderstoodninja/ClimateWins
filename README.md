@@ -170,7 +170,9 @@ We ran the data through a KNN model, which yielded an overall accuracy score of 
 
 #### Decision Tree
 The decision tree recognises patterns in the data to create subsets of the data. The decision tree we created is quite deep and complex, meaning it is likely overfitting. For this, it would need to be pruned. This will reduce the complexity and hence improve predictive accuracy.
+![Decision Tree](Visualisations/decision_tree.png)
 
 
 #### Artificial Neural Network
 For the first run of the unsupervised learning ANN algorithm, we obtained an accuracy score of 50.02% & 49.93% on training and test data, respectively. Upon changing the number of hidden layers and iterations that the model runs through we obtained improved scores of 88.49% & 59.72% (training and test).
+![ANN](Visualisations/confusion_matrix_ann.png)

@@ -34,6 +34,7 @@ Some biases observed in this project include:
 <li><b>Temporal Bias:</b> Given that the data range is so large (1800s to 2022), some of the data is likely to not be relevant anymore and could result in a distorted outcome from the models</li>
 <li><b>Location Bias:</b> The data has been collected from only European weather stations and may not be able to predict weather patterns from other areas of the world given that climates are different.</li></ol>
 
+### Models
 #### K-Nearest Neighbour
 We ran the data through a KNN model, which yielded an overall accuracy score of 88,15% for all 15 weather stations. Valentia has the best accuracy score of 95.83%, well above the mean of 88%. Sonnblick showed an accuracy score of 100%, indicating that the model was overfitting. i.e. the model has overadapted to the training data and captures even random fluctuations. 
 <table>
@@ -166,3 +167,10 @@ We ran the data through a KNN model, which yielded an overall accuracy score of 
             <td>95.83%</td>
         </tr>
     </table>
+
+#### Decision Tree
+The decision tree recognises patterns in the data to create subsets of the data. The decision tree we created is quite deep and complex, meaning it is likely overfitting. For this, it would need to be pruned. This will reduce the complexity and hence improve predictive accuracy.
+
+
+#### Artificial Neural Network
+For the first run of the unsupervised learning ANN algorithm, we obtained an accuracy score of 50.02% & 49.93% on training and test data, respectively. Upon changing the number of hidden layers and iterations that the model runs through we obtained improved scores of 88.49% & 59.72% (training and test).
